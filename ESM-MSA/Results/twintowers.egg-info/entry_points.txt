@@ -1,0 +1,3 @@
+[console_scripts]
+twintowers = TwinTowers.command:tasks
+
