@@ -23,4 +23,6 @@ from https://github.com/facebookresearch/esm
 
 Alphafold2 training data: 
 
-https://registry.opendata.aws/openfold/ from Openfold(https://github.com/aqlaboratory/openfold)
+https://registry.opendata.aws/openfold/ 
+
+from Openfold(https://github.com/aqlaboratory/openfold)
