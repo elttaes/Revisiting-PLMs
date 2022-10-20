@@ -1,5 +1,6 @@
 # Revisiting-PLMs
-Revisiting Evolution-aware &amp; free protein language models
+Revisiting Evolution-aware &amp; free protein language models as protein function predictors
+
 ## Env:
 Jax:
 
