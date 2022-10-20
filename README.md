@@ -1,13 +1,14 @@
 # Revisiting Evolution-aware &amp; free protein language models as protein function predictors
 
 ## Env:
-Jax:
+### Jax(Alphafold2):
 
 https://github.com/kalininalab/alphafold_non_docker
 
-Esm:
+### Pytorch(ESM-1b,MSA-Transformer):
+1. As a prerequisite, you must have PyTorch installed(https://pytorch.org/get-started/locally/).
 
-pip install fair-esm  # latest release, OR:
+2. pip install fair-esm  # latest release, OR:
 
 pip install git+https://github.com/facebookresearch/esm.git
 
