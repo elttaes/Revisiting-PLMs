@@ -28,8 +28,13 @@ https://registry.opendata.aws/openfold/
 from Openfold(https://github.com/aqlaboratory/openfold)
 
 @article{hu2022exploring,
+
   title={Exploring evolution-awere \&-free protein language models as protein function predictors},
+  
   author={Hu, Mingyang and Yuan, Fajie and Yang, Kevin K and Ju, Fusong and Su, Jin and Wang, Hui and Yang, Fei and Ding, Qiuyang},
+  
   journal={arXiv preprint arXiv:2206.06583},
+  
   year={2022}
+  
 }
