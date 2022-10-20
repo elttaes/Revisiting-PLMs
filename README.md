@@ -10,9 +10,10 @@ https://github.com/kalininalab/alphafold_non_docker
 
 2. pip install fair-esm  # latest release, OR:
 
-pip install git+https://github.com/facebookresearch/esm.git
+   pip install git+https://github.com/facebookresearch/esm.git
 
 ## data:
+### For SSP & Contact map:
 ESMStructuralSplitDataset: 
 | Name   | Description                                                                   | URL                                                                   |
 |--------|-------------------------------------------------------------------------------|-----------------------------------------------------------------------|
@@ -22,6 +23,9 @@ ESMStructuralSplitDataset:
 
 from https://github.com/facebookresearch/esm
 
+For Contact map Test: CAMEO(https://www.cameo3d.org/)
+
+### For pretrain ESM-1b & MSA-Transformer
 Alphafold2 training data: 
 
 https://registry.opendata.aws/openfold/ 
