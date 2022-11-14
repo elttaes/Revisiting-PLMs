@@ -1,4 +1,4 @@
-# Revisiting Evolution-aware &amp; free protein language models as protein function predictors
+# Exploring Evolution-aware &amp; free protein language models as protein function predictors
 
 ## Env:
 ### Jax(Alphafold2):
@@ -23,7 +23,11 @@ ESMStructuralSplitDataset:
 
 from https://github.com/facebookresearch/esm
 
-For Contact map Test: CAMEO(https://www.cameo3d.org/)
+### For Contact map Test: 
+CAMEO(https://www.cameo3d.org/)
+
+### For Fitness dataset:
+Tape(https://github.com/songlab-cal/tape)
 
 ### For pretrain ESM-1b & MSA-Transformer
 Alphafold2 training data: 
