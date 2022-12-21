@@ -82,34 +82,26 @@ def make_msa_features(
 class DataPipeline:
     """Runs the alignment tools and assembles the input features."""
 
-    def process(self, fasta_name: str, input_fasta_path: str, msa_output_dir: str) -> FeatureDict:
+    def process(self, fasta_name: str, input_a3m_path: str) -> FeatureDict:
         """Runs alignment tools on the input sequence and creates features."""
-        with open(input_fasta_path) as f:
-            input_fasta_str = f.read()
-        input_seqs, input_descs = parsers.parse_fasta(input_fasta_str)
-
-        if len(input_seqs) != 1:
-            raise ValueError(
-                f'More than one input sequence found in {input_fasta_path}.')
-        input_sequence = input_seqs[0]
-        input_description = input_descs[0]
-        num_res = len(input_sequence)
-
+        
+        with open(input_a3m_path,'r') as f:
+            input_a3m_str = f.read()
         hhblits_bfd_uniclust_result = {}
-        hhblits_bfd_uniclust_result['a3m'] = #a3m file path
+        hhblits_bfd_uniclust_result['a3m'] = input_a3m_str
 
         bfd_msa, bfd_deletion_matrix = parsers.parse_a3m(
             hhblits_bfd_uniclust_result['a3m'])
 
         sequence_features = make_sequence_features(
             fasta_name=fasta_name,
-            sequence=input_sequence,
-            description=input_description,
-            num_res=num_res
+            sequence=bfd_msa[0],
+            description=fasta_name,
+            num_res=len(bfd_msa[0])
             )
 
         msa_features = make_msa_features(
-            msas=(bfd_msa,bfd_msa[0]),
-            deletion_matrices=(bfd_deletion_matrix,bfd_deletion_matrix[0]))
+            msas=(bfd_msa,bfd_msa),
+            deletion_matrices=(bfd_deletion_matrix,bfd_deletion_matrix))
 
         return {**sequence_features, **msa_features}
