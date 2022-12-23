@@ -136,12 +136,8 @@ class RunModel:
       Loss.
     """
     self.params = params
-    #self.cast_params()
-    #logging.info('Running predict with shape(feat) = %s',tree.map_structure(lambda x: x.shape, feat))
     tree.map_structure(lambda x: x.shape, feat)
     result = self.apply(self.params, rng, feat)
-    #jax.tree_map(lambda x: x.block_until_ready(), result[0])
-  
     return result
 
   def init_params_retern(self, feat: features.FeatureDict, random_seed: int = 0):

@@ -26,9 +26,9 @@ def process_path(path):
         feat_paths = np.char.decode(index, 'utf-8')
         fs = open(str(feat_paths), "rb")
         feature_dict = pickle.load(fs)
-        labels.append(feature_dict['metal'])
+        labels.append(feature_dict['label'])
         feature.append(model_runner.process_features(
             feature_dict, random_seed=random.randrange(sys.maxsize)))
     processed_feature_dict = features2parallel(feature)
-    processed_feature_dict['metal']=np.array(labels)
+    processed_feature_dict['metal']=jnp.array(np.array(labels).astype(np.float))
     return processed_feature_dict
