@@ -4,4 +4,4 @@ If you want to finetune alphafold, you just need "python train.py".But there are
 
 2. Because we using the "pmap", the GPU number should >=2. If you do not have multiple GPUs, "state = jax.pmap(updater.init)(rng_pmap, data)" should be changed into "state = updater.init(rng, data)"
 
-3. You need modify "features_dir" in function "datasets_train/test"
+3. You need modify "features_dir" in function "datasets_train/test" into the real dataset.
