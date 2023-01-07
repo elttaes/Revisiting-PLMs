@@ -25,7 +25,6 @@ import shutil
 import tensorflow as tf
 from process_path import process_path
 file_save='./tmp/scratch_nopair'
-shutil.rmtree(file_save,True)
 writer = tf.summary.create_file_writer(file_save)
 model_params_dir='/home/public/bigdata/af2data/af2data'
 os.environ['TF_FORCE_UNIFIED_MEMORY'] = '1'
