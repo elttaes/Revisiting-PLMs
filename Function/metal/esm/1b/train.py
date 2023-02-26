@@ -3,7 +3,6 @@ import torch
 import sys
 sys.path.append("..")
 import os
-#os.environ["CUDA_VISIBLE_DEVICES"] = "1,2,3"
 os.environ["CUDA_VISIBLE_DEVICES"] = ""
 import model_down
 from Bio import SeqIO
@@ -61,7 +60,7 @@ if __name__ == '__main__':
                 label.append(int(filename[0]))
             return msa_batch_token,label
         
-    a3m_dir='/home/public/bigdata/my/datasets/metal/train'
+    a3m_dir='datasets/metal/train'
     filenames = [
         os.path.join(a3m_dir,name) for name in os.listdir(a3m_dir)
         if os.path.splitext(name)[-1] == '.a3m'
@@ -75,11 +74,11 @@ if __name__ == '__main__':
                                             num_workers=8,
                                             collate_fn=dataset.collate_fn)
 
-    test_dir='/home/public/bigdata/my/datasets/metal/test'
+    test_dir='datasets/metal/test'
     testnames = [
         os.path.join(test_dir,name) for name in os.listdir(test_dir)
         if os.path.splitext(name)[-1] == '.a3m'
-    ]  #选择指定目录下的.png图片
+    ]
     test_dataset = Dataset(testnames)
     test_dataloader = torch.utils.data.DataLoader(test_dataset,
                                             batch_size=batch_size,
