@@ -1,18 +1,10 @@
 # Exploring Evolution-aware &amp; free protein language models as protein function predictors
 
-## Env:
-### Jax(Alphafold2):
+## dataset:
+### Metal Ion Binding dataset
+data/
+└── Metal Ion Binding/
 
-https://github.com/kalininalab/alphafold_non_docker
-
-### Pytorch(ESM-1b,MSA-Transformer):
-1. As a prerequisite, you must have PyTorch installed(https://pytorch.org/get-started/locally/).
-
-2. pip install fair-esm  # latest release, OR:
-
-   pip install git+https://github.com/facebookresearch/esm.git
-
-## data:
 ### For SSP & Contact map:
 ESMStructuralSplitDataset: 
 | Name   | Description                                                                   | URL                                                                   |
@@ -36,6 +28,17 @@ https://registry.opendata.aws/openfold/
 
 from Openfold(https://github.com/aqlaboratory/openfold)
 
+## Env:
+### Jax(Alphafold2):
+
+https://github.com/kalininalab/alphafold_non_docker
+
+### Pytorch(ESM-1b,MSA-Transformer):
+1. As a prerequisite, you must have PyTorch installed(https://pytorch.org/get-started/locally/).
+
+2. pip install fair-esm  # latest release, OR:
+
+   pip install git+https://github.com/facebookresearch/esm.git
 
 
 
