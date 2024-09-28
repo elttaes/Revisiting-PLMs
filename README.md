@@ -1,9 +1,15 @@
 # Exploring Evolution-aware &amp; free protein language models as protein function predictors
 
 ## dataset:
-### Metal Ion Binding dataset
+### Metal Ion Binding dataset:
 data/
-└── Metal Ion Binding/
+
+└── [Metal Ion Binding](https://github.com/elttaes/Revisiting-PLMs/tree/main/data/Metal%20Ion%20Binding)/
+
+### Antibiotic Resistance dataset:
+data/
+
+└── [Antibiotic Resistance](https://github.com/elttaes/Revisiting-PLMs/tree/main/data/Antibiotic%20Resistance)/
 
 ### For SSP & Contact map:
 ESMStructuralSplitDataset: 
